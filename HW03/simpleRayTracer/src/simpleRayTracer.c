@@ -9,11 +9,18 @@
 // to compile animation:
 //   ffmpeg -y -i image_%05d.ppm -pix_fmt yuv420p foo.mp4
 
+
+
+//When I compiled using make and ran, the program gave me a seg fault in return
+
+
+
 int main(int argc, char *argv[]){
   	int rank,size;
 
 	MPI_Init(&argc, &argv);
-
+	rank = MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+        size = MPI_Comm_size(MPI_COMM_WORLD, &size);
  // int rank = 0;
   //int size = 1;
   
@@ -108,8 +115,8 @@ int main(int argc, char *argv[]){
      *
      */
 
-        MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-        MPI_Comm_size(MPI_COMM_WORLD, &size);
+        //MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+        //MPI_Comm_size(MPI_COMM_WORLD, &size);
 
 
 
