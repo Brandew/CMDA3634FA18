@@ -34,5 +34,6 @@ int main(int argc, char **argv){
  printf("estimate of Pi = %lf\ntime : %f seconds\n", estpi, time);
 
   return 0;
+//Running with four threads produces a result slightly quicker than using one thread. The result produced is also slightly different.
 }
 
